@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[58],{4609:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/graphql-citadel-website/blog/tags/hello","allTagsPath":"/graphql-citadel-website/blog/tags","count":1}')}}]);
