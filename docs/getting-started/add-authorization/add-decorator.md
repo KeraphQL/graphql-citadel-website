@@ -36,13 +36,9 @@ enum Permission {
     CREATE
     READ
 }
+
+directive @${hasPermissionsDirectiveName}(permissions: [Permission]) on FIELD_DEFINITION
 ```
-
-:::caution
-
-Currently, only enums named `Permission` is supported! We are working to this to dynamically refer from the directive that GraphQL citadel generates.
-
-:::
 
 ## 2. Assign the directive
 
