@@ -27,15 +27,9 @@ type Query {
 }
 ```
 
-## 1. Define `directive`
+## 1. Assign the directive
 
-Let's say, you want the login-ed users to only query the book resource. In that case, you can declare the directive `@authenticated` as below.
-
-```graphql
-directive @authenticated ON OBJECT_FIELD
-```
-
-## 2. Assign the directive
+Add the directive to your queries or mutations.
 
 ```graphql
 type Query {
@@ -43,11 +37,11 @@ type Query {
 }
 ```
 
-## 3. Add schema transformer and type definitions
+## 2. Add schema transformer and type definitions
 
 ```typescript
 const { citadelDirective, citadelDirectiveTrasformer } = citadelDirective({
-    resolver: // ... see Step 4
+    authenticationResolver: // ... see the next page for details
 })
 
 let schema = makeExecutableSchema({

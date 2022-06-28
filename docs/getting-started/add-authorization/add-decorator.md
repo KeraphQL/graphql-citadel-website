@@ -27,7 +27,7 @@ type Query {
 }
 ```
 
-## 1. Define `directive`
+## 1. (Optional) Define `directive`
 
 Let's say, you want to only the admins to create a book. In that case, you can declare the directive `@hasPermission` as below.
 
@@ -36,16 +36,20 @@ enum Permission {
     CREATE
     READ
 }
-
-directive @hasPermission(permission: Permission) ON OBJECT_FIELD
 ```
+
+:::caution
+
+Currently, only enums named `Permission` is supported! We are working to this to dynamically refer from the directive that GraphQL citadel generates.
+
+:::
 
 ## 2. Assign the directive
 
 ```graphql
 type Mutation {
     // Only users that has CREATE permission can call this API
-    createBook (book: BookInput): Book @hasPermission(permission: CREATE)
+    createBook (book: BookInput): Book @hasPermissions(permissions: [CREATE])
 }
 ```
 
@@ -53,7 +57,7 @@ type Mutation {
 
 ```typescript
 const { citadelDirective, citadelDirectiveTrasformer } = citadelDirective({
-    resolver: // ... see the next page
+    permissionResolver: // ... see the next page
 })
 
 let schema = makeExecutableSchema({
@@ -72,21 +76,4 @@ const server = new ApolloServer({
 });
 
 // ...
-```
-
-## 4. Implement the resolver
-
-Implement a resolver that returns the user permission(s).
-
-```typescript
-// graphql-citadel will check if the  user has permission that is declared at @hasPermission
-async function resolver({context}): Promise<string> {
-    const { user } = context
-    const permission = await getUserPermission()
-    return permission
-}
-
-const { citadelDirective, citadelDirectiveTransformer } = citadelDirective({
-    resolver
-})
 ```

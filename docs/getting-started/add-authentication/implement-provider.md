@@ -17,3 +17,5 @@ const { authzDirective, authzDirectiveTransformer } = citadelDirective({
     authenticationResolver
 })
 ```
+
+That's it! Now, all the queries or mutations which has `@authenticated` requires users to be authenticated.
