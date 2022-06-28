@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Test build website
+        run: yarn build
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        linter:
+          - reviewdog/action-actionlint@v1
+          - reviewdog/action-markdownlint@v0
+          - reviewdog/action-misspell@v1
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ${{ matrix.linter }}
+        with:
+          reporter: github-pr-review
