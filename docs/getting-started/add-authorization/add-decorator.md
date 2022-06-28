@@ -23,7 +23,7 @@ type Mutation {
 }
 
 type Query {
-    books: [Book]
+    books: [Book!]
 }
 ```
 
@@ -52,8 +52,8 @@ type Mutation {
 ## 3. Add schema transformer and type definitions
 
 ```typescript
-const { authzDirective, authzDirectiveTrasformer } = authDirective({
-    resolver: // ... see Step 4
+const { citadelDirective, citadelDirectiveTrasformer } = citadelDirective({
+    resolver: // ... see the next page
 })
 
 let schema = makeExecutableSchema({
@@ -86,7 +86,7 @@ async function resolver({context}): Promise<string> {
     return permission
 }
 
-const { authzDirective, authzDirectiveTransformer } = authDirective({
+const { citadelDirective, citadelDirectiveTransformer } = citadelDirective({
     resolver
 })
 ```

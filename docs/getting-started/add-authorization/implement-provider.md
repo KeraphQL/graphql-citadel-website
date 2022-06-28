@@ -8,13 +8,13 @@ Implement a resolver that returns the user permission(s).
 
 ```typescript
 // graphql-citadel will check if the  user has permission that is declared at @hasPermission
-async function resolver({context}): Promise<string> {
+async function authorizationResolver({context}): Promise<string> {
     const { user } = context
-    const permission = await getUserPermission()
+    const permission = await getUserPermission(user)
     return permission
 }
 
-const { authzDirective, authzDirectiveTransformer } = authDirective({
-    resolver
+const { citadelDirective, citadelDirectiveTransformer } = citadelDirective({
+    authorizationResolver
 })
 ```

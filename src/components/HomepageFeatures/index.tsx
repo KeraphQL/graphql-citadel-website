@@ -11,31 +11,29 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Security first',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/security_icon_with_man.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Schema-first, so you can impose policies declaratively. Deny-By-Default makes your application prevent unintentional security leaks.
       </>
     ),
   },
   {
     title: 'Easy to use',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/runner_start.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Write a resolver and just add a schema directive (e.g. <code>@hasPermission</code>) to your query or your mutation.
+        It will force a policy to your operation.
       </>
     ),
   },
   {
     title: 'Powered by graphql-tools',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/programmer.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Works with the existing ecosystem! You can use GraphQL Citadel with any GraphQL toolings.
       </>
     ),
   },

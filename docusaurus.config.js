@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Graphql Citadel',
+  title: 'GraphQL Citadel',
   tagline: 'Easy to use schema-first GraphQL schema directive for authentication and authorization',
   url: 'https://keraphql.github.io/',
   baseUrl: '/graphql-citadel-website/',
@@ -60,7 +60,7 @@ const config = {
         title: 'GraphQL Citadel',
         logo: {
           alt: 'GraphQL Citadel Logo',
-          src: 'img/logo.svg',
+          src: 'img/graphql-citadel.png',
         },
         items: [
           {
