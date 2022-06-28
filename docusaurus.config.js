@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Graphql Citadel',
   tagline: 'Easy to use schema-first GraphQL schema directive for authentication and authorization',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://keraphql.github.io/',
+  baseUrl: '/graphql-citadel-website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
