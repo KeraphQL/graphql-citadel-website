@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Define GraphQL Directive
+# Add GraphQL Directive
 
 `graphql-citadel` is powered by GraphQL Schema directives. You will first add a schema directory to your schema.
 
