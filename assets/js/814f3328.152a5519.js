@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Initial Release \ud83d\ude80","permalink":"/graphql-citadel-website/blog/Initial Release \ud83d\ude80"}]}')}}]);

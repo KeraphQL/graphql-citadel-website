@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[741],{8937:e=>{e.exports=JSON.parse('[{"label":"release-note","permalink":"/graphql-citadel-website/blog/tags/release-note","count":1}]')}}]);
