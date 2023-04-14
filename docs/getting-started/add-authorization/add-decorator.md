@@ -52,7 +52,7 @@ type Mutation {
 ## 3. Add schema transformer and type definitions
 
 ```typescript
-const { citadelDirective, citadelDirectiveTrasformer } = citadelDirective({
+const { citadelDirectiveTypeDefs, citadelDirectiveTransformer } = citadelDirective({
     permissionResolver: // ... see the next page
 })
 

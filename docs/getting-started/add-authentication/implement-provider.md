@@ -13,7 +13,7 @@ async function authenticationResolver({context}): Promise<boolean> {
     return !!user
 }
 
-const { authzDirective, authzDirectiveTransformer } = citadelDirective({
+const { citadelDirectiveTypeDefs, citadelDirectiveTransformer } = citadelDirective({
     authenticationResolver
 })
 ```
