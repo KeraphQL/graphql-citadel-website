@@ -37,7 +37,7 @@ enum Permission {
     READ
 }
 
-directive @${hasPermissionsDirectiveName}(permissions: [Permission]) on FIELD_DEFINITION
+directive @hasPermissions(permissions: [Permission]) on FIELD_DEFINITION
 ```
 
 ## 2. Assign the directive
